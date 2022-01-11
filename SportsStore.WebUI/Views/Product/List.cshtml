@@ -1,5 +1,4 @@
-﻿@using SportsStore.Domain.Entities
-@model IEnumerable<Product>
+﻿@model SportsStore.WebUI.Models.ProductListViewModel
 
 @{
     ViewBag.Title = "Products";
@@ -7,11 +6,10 @@
 
 <h2>List</h2>
 
-@foreach (var p in Model)
+@foreach (var p in Model.Products)
             {
-                <div>
-                    <h3>@p.Name</h3>
-                    @p.Description
-                    <h4>@p.Price.ToString("c")</h4>
-                </div>
+                @Html.Partial("ProductSummary", p);
             }
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PageInfo, x => Url.Action("List", new { page = x , category =Model.CurruntCategory}));
+</div>

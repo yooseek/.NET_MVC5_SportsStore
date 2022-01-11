@@ -1,0 +1,18 @@
+﻿@model SportsStore.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Admin : Edit "+Model.Name;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    // 클라이언트쪽 유효성 검사를 수행하고 싶지 않을때 아래 두 코드 실행 - 전체 뷰 비활성화는 Web.config 파일에 적어라
+//    HtmlHelper.ClientValidationEnabled = false;
+//    HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+}
+
+<h2>Edit @Model.Name</h2>
+@using (Html.BeginForm("Edit","Admin"))
+            {
+                @Html.EditorForModel()
+    @Html.ValidationSummary();
+    <input type="submit" value="Save"/>
+    @Html.ActionLink("Cancel and return to List", "Index")
+            }

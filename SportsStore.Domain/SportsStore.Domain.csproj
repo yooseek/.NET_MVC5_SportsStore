@@ -73,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Cart.cs" />
+    <Compile Include="Entities\ShoppringDetails.cs" />
+    <Compile Include="IProductRepo\IOrderProcessor.cs" />
     <Compile Include="ProductRepo\EFProductRepository.cs" />
     <Compile Include="Context\EFDbContext.cs" />
     <Compile Include="Entities\Product.cs" />

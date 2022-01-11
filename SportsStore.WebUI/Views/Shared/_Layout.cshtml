@@ -17,25 +17,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("애플리케이션 이름", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("애플리케이션 이름", "List", "Product", new { Page = 1 }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("홈", "Index", "Home")</li>
-                    <li>@Html.ActionLink("정보", "About", "Home")</li>
-                    <li>@Html.ActionLink("연락처", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("홈", "List", "Product")</li>
+                    <li>@Html.ActionLink("정보", "About", "Product")</li>
+                    <li>@Html.ActionLink("연락처", "Contact", "Product")</li>
+                    <li>@Html.Action("Summary","Cart")</li>
+
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - 내 ASP.NET 애플리케이션</p>
-        </footer>
+        <div class="row panel">
+            <div id="categories" class="col-xs-3">
+                @Html.Action("Menu","Nav")
+            </div>
+            <div class="col-xs-8">
+                @RenderBody()
+            </div>
+        </div>
     </div>
-
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - 내 ASP.NET 애플리케이션</p>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
