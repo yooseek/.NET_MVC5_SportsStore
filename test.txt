@@ -1,0 +1,8 @@
+ Events (https://api.jquery.com/category/events/)
+- DOM Manipulation (https://api.jquery.com/category/manipulation/)
+- Selector (https://api.jquery.com/category/selectors/)
+- Ajax (https://api.jquery.com/category/ajax/)	1/17/2022	1/18/2022		
+- Kendo Overview (https://docs.telerik.com/kendo-ui/intro/first-steps)
+- Kendo DataSource (https://docs.telerik.com/kendo-ui/framework/datasource/overview)
+- Kendo Templates (https://docs.telerik.com/kendo-ui/framework/templates/overview)
+- Kendo MVVM Pattern (https://docs.telerik.com/kendo-ui/framework/mvvm/overview)
